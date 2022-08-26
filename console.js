@@ -29,3 +29,18 @@ function digitalize (num) {
 digitalize("a1 b2 123 asd");
 
 _______________________________________________________________________________________________________________________________________________________________________
+
+s = prompt("Ingresa los km por hora")
+
+function cockroachSpeed(s) {
+
+    velocidadConstante = 27.777
+    conversion = (velocidadConstante * s)
+
+    return conversion
+}
+
+console.log(cockroachSpeed(s))
+
+________________________________________________________________________________________________________________________________________________________
+
