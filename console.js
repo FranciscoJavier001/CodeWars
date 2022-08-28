@@ -42,5 +42,38 @@ function cockroachSpeed(s) {
 
 console.log(cockroachSpeed(s))
 
+****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** 
+
+s = prompt("Ingresa los km por hora")
+
+const cockroachSpeed = (s) => {
+  conversion = (s*27.778)
+  
+  return (Math.floor(conversion))
+}
+
+console.log(cockroachSpeed(s))
+
 ________________________________________________________________________________________________________________________________________________________
+
+const doubleChar = (str) => {
+    return [...str].map(xD => xD.repeat(2)).join('')
+}
+
+console.log(doubleChar("asD"));
+
+________________________________________________________________________________________________________________________________________________________
+
+const sumArray = (array) => {
+    if (array.length < 2) {
+        return 0
+    } else {
+        return array.reduce((total, valorActual) => total + valorActual) - 
+        Math.min(...array) - Math.max(...array) //** Asi puedo saber cual es el valor minimo de cada array */
+    }
+}
+
+console.log(sumArray([6, 2, 1, 8, 10]));
+console.log(sumArray([1, 2, 3, 4, 5]));
+console.log(sumArray([6, 7, 8, 9, 0]));
 
