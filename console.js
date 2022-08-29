@@ -13,11 +13,11 @@ function digitalize(num) { //** Funcion que va a recibir uno numeros del prompt 
 
 console.log(digitalize(num));
 
-****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** 
+****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ******
 
 function digitalize (num) {
 
-    var arregloInicial = num.split("") //** Convierte los caracteres en independientes */
+    var arregloInicial = num //** Convierte los caracteres en independientes */
 
     var arregloInvertido = arregloInicial.reverse() //** Muevo el array de lugar */
 
@@ -28,7 +28,7 @@ function digitalize (num) {
 
 digitalize("a1 b2 123 asd");
 
-_______________________________________________________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________________________________________________
 
 s = prompt("Ingresa los km por hora") //** Pedimos s */
 
@@ -42,7 +42,7 @@ const cockroachSpeed = (s) => { //** Funcion que recibe s */
 
 console.log(cockroachSpeed(s)) //** Hacemos un llamado de la funcion */
 
-****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** 
+****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ******
 
 s = prompt("Ingresa los km por hora") //** Solicitamos s */
 
@@ -54,4 +54,29 @@ const cockroachSpeed = (s) => { //** Funcion que recibe s */
 
 console.log(cockroachSpeed(s)) //** Hacemos el llamado a la funcion */
 
-________________________________________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________________________________________________
+
+const doubleChar = (str) => { //** FF que recibe str */
+    return [...str] //** Regresame como un arreglo ese string */
+    .map(xD => xD.repeat(2)).join('') //** Metodo map, donde se recibe, y se va a repetir 2 veces y se unen los espacios */
+}
+
+console.log(doubleChar("asD")); //** Ejecutamos la funcion */
+
+________________________________________________________________________________________________________________________________________________________________
+
+const sumArray = (nums) => { //** FF que recibe nums */
+    if (nums.length <= 2) { //** Si es menos a 0 simplemente regresa 0 */
+        return 0
+    } else { //** Pero si es diferente */
+        return nums
+        .reduce((total, valorActual) => total + valorActual) - //** Metodo que devuelve un valor global, ocupa total y vA despues de FF se reciben ahi */
+        Math.min(...nums) - Math.max(...nums) //** Busca el minumo y el maximo y los resta */
+    }
+}
+
+console.log(sumArray([6, 10]));
+console.log(sumArray([1, 2, 3, 4, 5]));
+console.log(sumArray([6, 7, 8, 9, 0]));
+
+________________________________________________________________________________________________________________________________________________________________
