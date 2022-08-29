@@ -30,49 +30,28 @@ digitalize("a1 b2 123 asd");
 
 _______________________________________________________________________________________________________________________________________________________________________
 
-s = prompt("Ingresa los km por hora")
+s = prompt("Ingresa los km por hora") //** Pedimos s */
 
-function cockroachSpeed(s) {
+const cockroachSpeed = (s) => { //** Funcion que recibe s */
 
-    velocidadConstante = 27.777
-    conversion = (velocidadConstante * s)
+    velocidadConstante = 27.777 //** Velocidad constante para la operacion */
+    conversion = (velocidadConstante * s) //** Operacion de la conversion */
 
-    return conversion
+    return conversion //** Lo que retornamos */
 }
 
-console.log(cockroachSpeed(s))
+console.log(cockroachSpeed(s)) //** Hacemos un llamado de la funcion */
 
 ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** ****** 
 
-s = prompt("Ingresa los km por hora")
+s = prompt("Ingresa los km por hora") //** Solicitamos s */
 
-const cockroachSpeed = (s) => {
-  conversion = (s*27.778)
+const cockroachSpeed = (s) => { //** Funcion que recibe s */
+  conversion = (s*27.778) //** Operacion para la conversion */
   
-  return (Math.floor(conversion))
+  return (Math.floor(conversion)) //** Operacion que redondea */
 }
 
-console.log(cockroachSpeed(s))
+console.log(cockroachSpeed(s)) //** Hacemos el llamado a la funcion */
 
 ________________________________________________________________________________________________________________________________________________________
-
-const doubleChar = (str) => {
-    return [...str].map(xD => xD.repeat(2)).join('')
-}
-
-console.log(doubleChar("asD"));
-
-________________________________________________________________________________________________________________________________________________________
-
-const sumArray = (array) => {
-    if (array.length < 2) {
-        return 0
-    } else {
-        return array.reduce((total, valorActual) => total + valorActual) - 
-        Math.min(...array) - Math.max(...array) //** Asi puedo saber cual es el valor minimo de cada array */
-    }
-}
-
-console.log(sumArray([6, 2, 1, 8, 10]));
-console.log(sumArray([1, 2, 3, 4, 5]));
-console.log(sumArray([6, 7, 8, 9, 0]));
