@@ -80,3 +80,29 @@ ________________________________________________________________________________
 // console.log(sumArray([6, 7, 8, 9, 0]));
 
 ________________________________________________________________________________________________________________________________________________________________
+
+function rentalCarCost(d) {
+    // Your solution here
+
+    costoFinal= 0 //** Declaro las variables */
+    costoDiario = 40
+
+    if(d >= 1 && d <= 2) { //** Hago las opera operaciones */
+        costoFinal = costoDiario*d
+        return costoFinal
+    }
+    else if (d >= 3 && d <= 6){
+        costoFinal = costoDiario*d-20
+        return costoFinal
+    }
+    else if (d >= 7){
+        costoFinal = costoDiario*d-50
+        return costoFinal
+    } else {
+        return "No hay Datos"
+    }
+  } 
+
+console.log(rentalCarCost(2))
+console.log(rentalCarCost(3))
+console.log(rentalCarCost(7))
