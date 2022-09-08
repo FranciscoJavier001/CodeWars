@@ -2,7 +2,6 @@ const app = document.querySelector('.container')
 const getUrl = new URLSearchParams(window.location.search)
 id = getUrl.get('id')
 const url = `https://jsonplaceholder.typicode.com/users`
-console.log(`${url}/${id}`);
 fetch(`${url}/${id}`)
 .then( resp => resp.json())
 .then(data => {
