@@ -3,13 +3,15 @@
 }
 
 body{
-  padding: 60px
+  padding: 60px /* Tamaño del cuerpo de la pagina */
 }
 
-input{
-  color: gray;
-  font-size: 1.2rem;
-  width: 100%;
+input{ /* Donde pongo lo que busco */
+  color: gray; /* Color del texto */
+  font-size: 1.2rem; /* Tamaño de la fuente */
+  display: block; /* Para moverlo en medio */
+  margin-right: auto; /* Para centrar la caja */
+  margin-left: auto; /* Para centrar la caja */
 }
 
 .card-gris{
@@ -34,4 +36,9 @@ input{
 
 .card img{
   min-height: 170px;
+}
+
+#GEA-h2{ /* Id en GifExpertAPP */
+  text-align: center;
+  font-size: x-large;
 }
